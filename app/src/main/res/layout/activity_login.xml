@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <include
+        android:id="@+id/login_toolbar"
+        layout="@layout/app_bar_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/register_relative_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_below="@+id/text_input_layout2"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/register_relative_layout2"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_alignStart="@+id/register_relative_layout2"
+            android:layout_alignBottom="@+id/register_relative_layout2"
+            android:text="Loging in..."
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/login_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/login_to_your_account"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_below="@+id/login_lable"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="24dp">
+
+    <EditText
+
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_input_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="14dp"
+        android:hint="password">
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_input_layout2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="55dp"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

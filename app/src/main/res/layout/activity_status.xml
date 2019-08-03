@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatusActivity">
+
+    <include
+        android:id="@+id/status_appbar"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/status_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/account_status" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/status_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="43dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/save_changes"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/status_relative_layout"
+        android:layout_width="402dp"
+        android:layout_height="158dp"
+        android:layout_below="@+id/text_input_layout2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-38dp"
+        android:layout_marginEnd="-173dp"
+        android:layout_marginBottom="305dp"
+        android:layout_toStartOf="@+id/login_btn"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/register_relative_layout"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_alignStart="@+id/status_relative_layout"
+            android:layout_alignBottom="@+id/register_relative_layout"
+            android:text="Updating..."
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+</RelativeLayout>

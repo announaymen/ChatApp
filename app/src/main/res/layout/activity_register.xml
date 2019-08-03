@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <include
+        android:id="@+id/register_toolbar"
+        layout="@layout/app_bar_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/register_relative_layout"
+        android:layout_width="415dp"
+        android:layout_height="231dp"
+        android:layout_below="@+id/text_input_layout2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-38dp"
+        android:layout_marginEnd="-173dp"
+        android:layout_marginBottom="156dp"
+        android:layout_toStartOf="@+id/login_btn"
+
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/register_relative_layout"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_alignStart="@+id/register_relative_layout"
+            android:layout_alignBottom="@+id/register_relative_layout"
+            android:text="Creating account..."
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="17dp"
+        android:inputType="textPersonName">
+        <EditText
+            android:id="@+id/reg_display_name"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="15dp"
+            android:hint="@string/display_name"
+           />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/text_input_layout0"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="17dp"
+        android:hint="@string/email"
+        >
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:id="@+id/login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="15dp"
+          />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_input_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/passward">
+        <EditText
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:ems="10"
+
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_input_layout2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="7dp"
+        android:background="@color/colorAccent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/create_account"
+        android:textColor="@android:color/white" />
+
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="67dp"
+        android:text="Create a new Account"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+</RelativeLayout>
